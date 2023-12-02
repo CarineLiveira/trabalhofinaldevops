@@ -8,7 +8,7 @@ pipeline {
             }
         }
 
-        stage('Instala dependencias') {
+        stage('instalando dependências') {
             steps {
                 script {
                     sh 'npm install'
@@ -16,7 +16,7 @@ pipeline {
             }
         }
 
-        stage('Executa testes') {
+        stage('executando testes presentes no projeto') {
             steps {
                 script {
                     sh 'npm run test'
@@ -24,15 +24,15 @@ pipeline {
             }
         }
 
-        stage('Criando container') {
+        stage('criando container docker') {
             steps {
                 script {
-                    sh 'docker build -t trabalho .'
+                    sh 'docker build -t trabalho-final-devops .'
                 }
             }
         }
 
-        stage('Rodando container') {
+        stage('subindo coosjfvnjodfnojdfnvo') {
             steps {
                 script {
                     sh 'docker-compose up -d'
@@ -43,11 +43,11 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline executado com sucesso!'
+            echo 'pipipopo'
         }
 
         failure {
-            echo 'Pipeline falhou. Verifique os logs para mais informações.'
+            echo 'botafogo'
         }
     }
 }
